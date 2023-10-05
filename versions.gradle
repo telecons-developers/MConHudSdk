@@ -1,0 +1,9 @@
+ext {
+    compileSdkVersion = 33
+    minSdkVersion = 24
+    targetSdkVersion = 33
+
+    androidXAppcompatVersion = "1.6.1"
+
+    gsonVersion = "2.9.0"
+}
