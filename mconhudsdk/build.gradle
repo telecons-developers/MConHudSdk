@@ -45,7 +45,7 @@ afterEvaluate {
                 // You can then customize attributes of the publication as shown below.
                 groupId = 'kr.co.telecons'
                 artifactId = 'MConHudSdk'
-                version = '1.0.0'
+                version = '0.1.0'
             }
             // Creates a Maven publication called “debug”.
             debug(MavenPublication) {
@@ -53,8 +53,8 @@ afterEvaluate {
                 from components.debug
 
                 groupId = 'kr.co.telecons'
-                artifactId = 'final-debug'
-                version = '1.0.0'
+                artifactId = 'MConHudSdk-debug'
+                version = '0.1.0'
             }
         }
     }
