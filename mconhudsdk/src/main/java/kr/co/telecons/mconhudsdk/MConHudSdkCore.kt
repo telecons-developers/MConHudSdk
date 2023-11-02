@@ -153,12 +153,8 @@ class MConHudSdkCore : Service() {
             Actions.AUTHORIZATION -> {
                 val appKey : String? = intent.getStringExtra(ExtraKeys.APP_KEY)
                 appKey?.apply {
-                    if(this == "tcyjj2") {
-                        authCallback?.complete(true)
-                    } else {
-                        authAppKey(this) { result ->
-                            authCallback?.complete(result)
-                        }
+                    authAppKey(this) { result ->
+                        authCallback?.complete(result)
                     }
                 }
             }
