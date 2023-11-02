@@ -48,14 +48,14 @@ afterEvaluate {
                 version = '0.1.0'
             }
             // Creates a Maven publication called “debug”.
-            debug(MavenPublication) {
-                // Applies the component for the debug build variant.
-                from components.debug
-
-                groupId = 'kr.co.telecons'
-                artifactId = 'MConHudSdk-debug'
-                version = '0.1.0'
-            }
+//            debug(MavenPublication) {
+//                // Applies the component for the debug build variant.
+//                from components.debug
+//
+//                groupId = 'kr.co.telecons'
+//                artifactId = 'MConHudSdk-debug'
+//                version = '0.1.0'
+//            }
         }
     }
 }
