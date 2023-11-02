@@ -24,7 +24,7 @@ class Logger {
             VERBOSE(1), DEBUG(2), INFO(3), WARN(4), ERROR(5)
         }
 
-        fun setTag(tag: String){
+        internal fun setTag(tag: String){
             "$TAG [$tag]"
         }
 
@@ -38,37 +38,37 @@ class Logger {
             ERROR = LEVEL <= LogLevel.ERROR.level
         }
 
-        fun v(msg :String){
+        internal fun v(msg :String){
             if(isLogEnable && VERBOSE) {
                 handleLog(LogLevel.VERBOSE, msg)
             }
         }
 
-        fun d(msg :String){
+        internal fun d(msg :String){
             if(isLogEnable && DEBUG) {
                 handleLog(LogLevel.DEBUG, msg)
             }
         }
 
-        fun i(msg :String){
+        internal fun i(msg :String){
             if(isLogEnable && INFO) {
                 handleLog(LogLevel.INFO, msg)
             }
         }
 
-        fun w(msg : String, error : Throwable) {
+        internal fun w(msg : String, error : Throwable) {
             if(isLogEnable && WARN) {
                 handleLog(LogLevel.WARN, msg + "${error.message}")
             }
         }
 
-        fun e(msg : String) {
+        internal fun e(msg : String) {
             if(isLogEnable && ERROR) {
                 handleLog(LogLevel.ERROR, msg)
             }
         }
 
-        fun e(msg : String, error : Throwable) {
+        internal fun e(msg : String, error : Throwable) {
             if(isLogEnable && ERROR) {
                 handleLog(LogLevel.ERROR, msg + "${error.message}")
             }

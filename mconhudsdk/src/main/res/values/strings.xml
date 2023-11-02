@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="thbt_error_code_1000">인증되지 않은 사용자 입니다.</string>
+    <string name="thbt_error_code_1001">스마트폰의 네트워크 상태를 확인해 주세요.</string>
+    <string name="thbt_error_code_1002">오류가 발생되었습니다. 잠시 후 다시 사용해 주세요.</string>
+    <string name="thbt_error_code_1003">블루투스 장비 연결을 실패하였습니다.</string>
+    <string name="thbt_error_code_1004">스마트폰의 블루투스 상태를 확인해 주세요.</string>
+    <string name="thbt_error_code_1005">스마트폰의 \'위치\' 상태를 확인해 주세요.</string>
+</resources>
