@@ -267,7 +267,7 @@ class MConHudSdkCore : Service() {
         val call = MConHudRetrofitClient.service().authAppKey(appKey= appKey)
         call.enqueue(object: Callback<Auth> {
             override fun onResponse(call: Call<Auth>, response: Response<Auth>) {
-                if(response.code() == 200) {
+                if(response.code() == 200 && response.body()?.code == 200) {
                     Logger.d("$TAG onResponse() success. ${response.body()}")
                 } else {
                     Logger.e("$TAG onResponse() fail. ${response.body()}")

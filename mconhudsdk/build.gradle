@@ -45,7 +45,7 @@ afterEvaluate {
                 // You can then customize attributes of the publication as shown below.
                 groupId = 'kr.co.telecons'
                 artifactId = 'MConHudSdk'
-                version = '0.1.0'
+                version = '0.1.2'
             }
             // Creates a Maven publication called “debug”.
 //            debug(MavenPublication) {
