@@ -53,13 +53,13 @@ You will receive a list of scanned HUD devices, scan completion, and scan errors
 //
 // MConHudScanDelegate
 //
-fun scanPeripheral(peripherals: MutableList<MConHudPeripheral>) {
+override fun scanPeripheral(peripherals: MutableList<MConHudPeripheral>) {
     // List sorted by rssi sensitivity of scanned HUD devices
 }
-fun scanTimeOut() {
+override fun scanTimeOut() {
     // When scan finished
 }
-fun error(error: MConHudSdkError) {
+override fun error(error: MConHudSdkError) {
     // An error occurred
 }
 ```
@@ -75,10 +75,10 @@ You will receive a signal via [MConHudScanDelegate] when a connection is establi
 //
 // MConHudScanDelegate
 //
-fun connectPeripheralResult(peripheral: peripheral) {
+override fun connectPeripheralResult(peripheral: peripheral) {
     // Connect success
 }
-fun error(error: MConHudSdkError) {
+override fun error(error: MConHudSdkError) {
     // Connect failed or an error occurred
 }
 ```
@@ -89,12 +89,12 @@ Bluetooth connection will be disconnected once turn off HUD device's power or ca
 // peripheral is MConHudPeripheral
 MConHudSdk.shared().disconnectPeripheral(peripheral= peripheral)
 ```
-You are to receive a disconnection signal through disconnectedPeripheral when the connection is terminated.
+You are to receive a disconnection signal via [MConHudScanDelegate] when the connection is terminated.
 ```kotlin
 //
 // MConHudScanDelegate
 //
-fun disconnectedPeripheral() {
+override fun disconnectedPeripheral() {
     // lost connection with HUD device
 }
 ```
@@ -180,7 +180,7 @@ MConHudSdk.shared().sendHudBuzzerLevel(buzzerLevel= buzzerLevel)
 ```
 You can receive the current buzzer status of the HUD through [MConHudDelegate].
 Do NOT retrive the buzzer information in low, medium, or high but only obtain on/off status.
-```
+```kotlin
 class MainActivity : AppCompatActivity(), MConHudDelegate {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
